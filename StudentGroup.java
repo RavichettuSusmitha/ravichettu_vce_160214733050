@@ -26,43 +26,53 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student[] getStudents() {
 		// Add your implementation here
-		return null;
+		return students;
 	}
 
 	@Override
 	public void setStudents(Student[] students) {
 		// Add your implementation here
+		this.students=students;
 	}
 
 	@Override
 	public Student getStudent(int index) {
 		// Add your implementation here
-		return null;
+		return students[index];
 	}
 
 	@Override
 	public void setStudent(Student student, int index) {
 		// Add your implementation here
+		this.students[index]=student;		
 	}
 
 	@Override
 	public void addFirst(Student student) {
 		// Add your implementation here
+		this.students[0]=student;
 	}
 
 	@Override
 	public void addLast(Student student) {
 		// Add your implementation here
+		this.students[length-1]=student;
 	}
 
 	@Override
 	public void add(Student student, int index) {
 		// Add your implementation here
+		this.students[index]=student;
 	}
 
 	@Override
 	public void remove(int index) {
 		// Add your implementation here
+		for(int i=index;i<this.students.length;i++)
+		{
+                  this.students[index]=this.students[index+1];
+		}
+		
 	}
 
 	@Override
